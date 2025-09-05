@@ -1,6 +1,9 @@
 <?php
 
 class Person{
+
+    const AUTHOR = "Ahmad Syarifuddin";
+
     var string $name;
     var ?string $address;
     var string $country = "Indonesia";
