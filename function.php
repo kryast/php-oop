@@ -7,3 +7,5 @@ $person->name = "Syarifuddin";
 
 $person->sayHello("Ahmad");
 $person->sayHello(null);
+
+$person->info();
