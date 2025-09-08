@@ -2,14 +2,24 @@
 
 namespace Data;
 
-interface Car {
+interface HasBrand {
+
+    function getBrand(): string;
+}
+
+interface IsMaintenance {
+
+    function isMaintenance(): bool;
+}
+
+interface Car extends HasBrand {
 
     function drive(): void;
 
     function getTire(): int;
 }
 
-class Avanza implements Car{
+class Avanza implements Car, IsMaintenance{
 
     function drive(): void
     {
@@ -19,5 +29,15 @@ class Avanza implements Car{
     function getTire(): int
     {
         return 4;
+    }
+
+    function getBrand(): string
+    {
+        return "Toyota";
+    }
+
+    function isMaintenance(): bool
+    {
+        return true;
     }
 }
