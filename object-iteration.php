@@ -9,14 +9,19 @@ class Data implements IteratorAggregate {
 
     public function getIterator(): Traversable{
 
-        $array = [
-            "first" => $this->first,
-            "second" => $this->second,
-            "third" => $this->third,
-            "forth" => $this->forth,
-        ];
+        // $array = [
+        //     "first" => $this->first,
+        //     "second" => $this->second,
+        //     "third" => $this->third,
+        //     "forth" => $this->forth,
+        // ];
 
-        return new ArrayIterator($array);
+        // return new ArrayIterator($array);
+
+            yield "first" => $this->first;
+            yield "second" => $this->second;
+            yield "third" => $this->third;
+            yield "forth" => $this->forth;
        
     }
 }
