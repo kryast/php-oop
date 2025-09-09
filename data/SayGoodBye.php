@@ -35,7 +35,16 @@ trait CanRun {
     public abstract function run(): void;
 }
 
+trait All {
+    use SayGoodBye, SayHello, HasName, CanRun{
+
+        // sayGoodBye as private;
+        // sayHello as private;
+    }
+}
+
 class ParentPerson {
+
       public function goodBye(): void
     {
         echo "Goodbye in Person" . PHP_EOL;
@@ -49,11 +58,7 @@ class ParentPerson {
 
 class Person extends ParentPerson{
 
-    use SayGoodBye, SayHello, HasName, CanRun{
-
-        // sayGoodBye as private;
-        // sayHello as private;
-    }
+    use All;
 
     public function run(): void
     {
